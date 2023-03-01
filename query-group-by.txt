@@ -10,7 +10,10 @@ GROUP BY YEAR(enrolment_date);
 
 2. Contare gli insegnanti che hanno l'ufficio nello stesso edificio
 
-
+SELECT office_address AS 'indirizzo ufficio', COUNT(`office_number`) AS 'n-insegnanti'
+FROM `teachers`
+WHERE office_address = office_address
+GROUP BY office_address;
 
 ----------------------------------------------------------------------------------------------------------------
 
